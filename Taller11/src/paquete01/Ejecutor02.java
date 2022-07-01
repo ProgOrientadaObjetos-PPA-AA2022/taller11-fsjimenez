@@ -37,7 +37,7 @@ public class Ejecutor02 {
                 
         
         // Lista de Menus
-        ArrayList lista = new ArrayList<>();
+        ArrayList<Menu> lista = new ArrayList<>();
         
         /* Agregar un proceso para generar objetos de tipo Menu Carta, Día, 
         Economico y Niño*. Cada arreglo datos, se corresponde a un tipo de Menú.
@@ -49,15 +49,16 @@ public class Ejecutor02 {
         
         
         for (int i = 0; i < lista.size(); i++) {
-            lista.get(i).establecerValorMenu();
+            lista.get(i).calcularValorMenu();
         }
         
+        /*
         // Un objeto de tipo Cuenta
         Cuenta miCuenta = new Cuenta("Luis Andrade", lista, 10);
         miCuenta.establecerSubtotal();
         miCuenta.establecerValorCancelar();
         System.out.printf("%s\n", miCuenta);
-        
+        */
 
 
     }

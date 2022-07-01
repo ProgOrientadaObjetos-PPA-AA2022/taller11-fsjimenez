@@ -9,6 +9,37 @@ package paquete01;
  *
  * @author Usuario iTC
  */
-public class Menu {
+public abstract class Menu {
+    protected String nombrePlato;
+    protected double valorMenu;
+    protected double valorInicial;
+    
+    public Menu(String nombre, double inicial){
+        nombrePlato = nombre;
+        valorInicial = inicial;
+    }
+    
+    public void establecerNombre(String n){
+        nombrePlato = n;
+    }
+    
+    public void establecerValorInicial(double vInicial){
+        valorInicial = vInicial;
+    }
+    
+    public abstract void calcularValorMenu();
+    
+    public String obtenerNombrePlato(){
+        return nombrePlato;
+    }
+    
+    public double obtenerValorMenu(){
+        return valorMenu;
+    }
+    
+    public double obtenerValorInicial(){
+        return valorInicial;
+    }
+    
     
 }
