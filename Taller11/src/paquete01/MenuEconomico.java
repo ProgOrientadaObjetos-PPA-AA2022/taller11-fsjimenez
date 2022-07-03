@@ -12,7 +12,8 @@ package paquete01;
 public class MenuEconomico extends Menu{
     private double porcentaje;
     
-    public MenuEconomico(double p){
+    public MenuEconomico(String nombre, double vInicial, double p){
+        super(nombre, vInicial);
         porcentaje = p;
     }
     
@@ -27,7 +28,7 @@ public class MenuEconomico extends Menu{
     public String toString(){
         String cadena = String.format("Menú Econónomico: \n"
                 + "Plato: %s\nValor Inicial: %.2f\nPorcentaje Descuento: %.2f\n"
-                + "Valor del Menú: %.2f\n",
+                + "Valor del Menú: %.2f\n\n",
                 nombrePlato,
                 valorInicial,
                 porcentaje,

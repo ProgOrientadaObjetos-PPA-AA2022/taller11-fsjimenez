@@ -14,7 +14,9 @@ public class MenuCarta extends Menu{
     private double valorBebida;
     private double porcentaje;
     
-    public MenuCarta(double porcion, double bebida, double por){
+    public MenuCarta(String nombre, double vInicial, double porcion, double bebida, 
+            double por){
+        super(nombre, vInicial);
         valorPorcion = porcion;
         valorBebida = bebida;
         porcentaje = por;
@@ -31,7 +33,7 @@ public class MenuCarta extends Menu{
         String cadena = String.format("Menú a la Carta: \n"
                 + "Plato: %s\nValor Inicial: %.2f\nValor guarnicion: %.2f\n"
                 + "Valor bebida: %.2f\nPorcentaje Adicional: %.2f\n"
-                + "Valor del Menú: %.2f\n",
+                + "Valor del Menú: %.2f\n\n",
                 nombrePlato,
                 valorInicial,
                 valorPorcion,

@@ -5,6 +5,8 @@
  */
 package paquete01;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author reroes
@@ -15,7 +17,37 @@ public class Ejecutor01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        MenuNinyos ninyos1 = new MenuNinyos("Niños 01", 2, 1, 1.5);
+
+        
+        MenuNinyos ninyos2 = new MenuNinyos("Niños 02", 3, 1, 1.5);
+
+        
+        MenuEconomico eco1 = new MenuEconomico("Econo 001", 4, 25);
+
+        
+        MenuDia dia1 = new MenuDia("Dia 001", 5, 1, 1);
+
+        
+        MenuCarta carta1 = new MenuCarta("Carta 001", 6, 1.5, 2, 10);
+    
+        
+        ArrayList<Menu> lista = new ArrayList<>();
+        lista.add(ninyos1);
+        lista.add(ninyos2);
+        lista.add(eco1);
+        lista.add(dia1);
+        lista.add(carta1);
+        
+        for (int i = 0; i < lista.size(); i++) {
+            lista.get(i).calcularValorMenu();
+        }
+        
+        Cuenta cuenta = new Cuenta("Felipe jimenez", lista, 12);
+        cuenta.establecerSubtotal();
+        cuenta.establecerValorCancelar();
+        
+        System.out.println(cuenta);
     }
     
     
@@ -24,14 +56,14 @@ public class Ejecutor01 {
 /*
 Factura
 Cliente: René Elizalde
-Menu del Día:
+Menu de Niños:
 	Plato: Niños 01
 	Valor Inicial: 2,00
 	Valor helado: 1,00
 	Valor pastel: 1,50
 	Valor del Menú: 4,50
 
-Menu del Día:
+Menu de Niños:
 	Plato: Niños 02
 	Valor Inicial: 3,00
 	Valor helado: 1,00
